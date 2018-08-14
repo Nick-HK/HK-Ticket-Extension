@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Tickets Tool",
+	"description": "Tickets Tool Extension (Cityline & URBTIX)",
+	"version": "1.0.1",
+	"author": "Nick",
+	"icons": { 
+		"16": "/images/icon-original.png", 
+		"48": "/images/icon-original.png", 
+		"128": "/images/icon-original.png" },
+	"browser_action": {
+		"default_icon": "/images/icon-original.png",
+		"default_title": "About",
+    "default_popup": "/html/about.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts":
+	[
+	  {
+	    "matches": [
+				"http://msg.urbtix.hk/*",
+				"http://busy.urbtix.hk/*",
+				"https://ticket.urbtix.hk/internet/",
+				"http://msg.cityline.com/busy.html"
+			],
+			"js": ["/js/jquery-3.3.1.min.js","/js/jquery-confirm.min.js","/js/script.js"],
+			"css": ["/css/jqeury-confirm.min.css"],
+			"run_at": "document_idle",
+			"all_frames": true
+	  }
+	]
+}
