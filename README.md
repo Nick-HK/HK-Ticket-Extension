@@ -1,11 +1,11 @@
 # HK Tickets Tool
 
-###Prerequisites:
+### Prerequisites:
  -  Chrome: Version support extension (Lastest Version is preferred)
 
 ------------
 
-###Installation Guide:
+### Installation Guide:
  1.  Download the zip and unzip to desire path
  2.  Open [chrome://extensions/](chrome://extensions/ "chrome://extensions/") with Chrome
  3.  Enable Developer Mode at the upper-right corner
@@ -33,14 +33,14 @@ v1.0.1 Changes:
 
 ------------
 
-###Cityline Usage:
+### Cityline Usage:
  -  Ask Nick to get the code before 10 am of the event
  -  If you can't get the code, select home page to be redirect
  -  Select the nature and paste the event or activity code and submit
 
 ------------
 
-###License
+### License
 
 `HK Tickets Tool` is licensed under The MIT License (MIT) .
 
