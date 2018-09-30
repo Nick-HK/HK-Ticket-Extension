@@ -1,8 +1,8 @@
 {
-	"manifest_version": 2,
-	"name": "Tickets Tool",
-	"description": "Tickets Tool Extension (Cityline & URBTIX)",
-	"version": "1.0.1",
+	"manifest_version": 3,
+	"name": "HK Tickets Tool",
+	"description": "HK Tickets Tool for AEG, URBTIX, CITYLINE",
+	"version": "1.0.2",
 	"author": "Nick",
 	"icons": { 
 		"16": "/images/icon-original.png", 
@@ -23,7 +23,9 @@
 				"http://msg.urbtix.hk/*",
 				"http://busy.urbtix.hk/*",
 				"https://ticket.urbtix.hk/internet/",
-				"http://msg.cityline.com/busy.html"
+				"http://msg.cityline.com/busy.html",
+				"https://www.aegpromotion.com/*",
+				"https://process.aegpromotion.com/*"
 			],
 			"js": ["/js/jquery-3.3.1.min.js","/js/jquery-confirm.min.js","/js/script.js"],
 			"css": ["/css/jqeury-confirm.min.css"],

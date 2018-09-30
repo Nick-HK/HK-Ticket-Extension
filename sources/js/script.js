@@ -7,6 +7,17 @@ chrome.storage.local.get(['emertick','emerlink'], function (items) {
 	}
 });
 
+//AEG
+if (url.includes("aegpromotion.com")){
+	if(document.body.innerText.includes("try again") || url.includes("Busy") || document.body.innerText.includes("Busy")){
+		window.location.href = "https://www.aegpromotion.com";
+	}
+	else if (url.includes("index")){
+		alertBox();
+	}
+}
+
+//Cityline
 if (url.includes("msg.cityline.com/busy.html")){
 	chrome.storage.local.get(['tickValue','updateCode'], function (items) {
 		if (items.tickValue=='cityline_activity'){
@@ -17,8 +28,19 @@ if (url.includes("msg.cityline.com/busy.html")){
 			window.location.href = "http://www.cityline.com/Events.do";
 		}
 	});
-} else if (url.includes("ticket.urbtix.hk/internet/")){
-	if (document.cookie==""){
+} 
+
+//Urbtix
+if (url.includes("ticket.urbtix.hk/internet/")){
+	alertBox();
+	//creditCard();
+}
+if (url.includes("msg.urbtix.hk") || url.includes("busy.urbtix.hk")){
+	window.location.href = "http://www.urbtix.hk";
+};
+
+function alertBox(){
+	if (document.cookie=="" || getCookie("dialog")== null ){
 		$.confirm({
 			title: 'Congratulations!',
 			content: '<div >' +
@@ -41,9 +63,7 @@ if (url.includes("msg.cityline.com/busy.html")){
 		});
 		setCookie('dialog','true',0.1);
 	}
-} else {
-	window.location.href = "http://www.urbtix.hk";
-};
+}
 
 function setCookie(name,value,days) {
     var expires = "";
