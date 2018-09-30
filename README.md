@@ -25,7 +25,15 @@ v1.0.1 Changes:
  -  Update of About Page with support of Cityline Code
  -  Add Emergency Function
 
-Cityline Usage:
+------------
+
+### Future Updates:
+
+ -  Auto Fill In Credit Card Information
+
+------------
+
+###Cityline Usage:
  -  Ask Nick to get the code before 10 am of the event
  -  If you can't get the code, select home page to be redirect
  -  Select the nature and paste the event or activity code and submit
