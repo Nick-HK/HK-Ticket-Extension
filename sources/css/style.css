@@ -63,3 +63,11 @@ span {
 .headerTitle{
   font-size:22px;
 }
+
+.panel-body{
+  padding: 0px;
+}
+
+.panel{
+  margin-bottom: 1px;
+}

@@ -10,9 +10,13 @@ chrome.storage.local.get(['emertick','emerlink'], function (items) {
 //AEG
 if (url.includes("aegpromotion.com")){
 	if(document.body.innerText.includes("try again") || url.includes("Busy") || document.body.innerText.includes("Busy")){
-		window.location.href = "https://www.aegpromotion.com";
-	}
-	else if (url.includes("index")){
+		chrome.storage.local.get(['aegTickVal','aegVal'], function (items) {
+			if (items.aegTickVal=='aeg_event'){
+				window.location.href = "https://www.aegpromotion.com/" +  items.aegVal ; //Sample: http://www.aegpromotion.com/jacky2019/
+			} else {
+				window.location.href = "https://www.aegpromotion.com" ;
+			}	
+	});} else if (url.includes("index")){
 		alertBox();
 	}
 }
