@@ -9,10 +9,10 @@ chrome.storage.local.get(['emertick','emerlink'], function (items) {
 
 //AEG
 if (url.includes("aegpromotion.com")){
-	if(document.body.innerText.includes("try again") || url.includes("Busy") || document.body.innerText.includes("Busy")){
+	if(url.includes("TryAgain") ){
 		chrome.storage.local.get(['aegTickVal','aegVal'], function (items) {
 			if (items.aegTickVal=='aeg_event'){
-				window.location.href = "https://www.aegpromotion.com/" +  items.aegVal ; //Sample: http://www.aegpromotion.com/jacky2019/
+				window.location.href = "http://www.aegpromotion.com/" +  items.aegVal ; //Sample: http://www.aegpromotion.com/jacky2019/
 			} else {
 				window.location.href = "https://www.aegpromotion.com" ;
 			}	
@@ -37,11 +37,49 @@ if (url.includes("msg.cityline.com/busy.html")){
 //Urbtix
 if (url.includes("ticket.urbtix.hk/internet/")){
 	alertBox();
-	//creditCard();
+	creditCard();
 }
 if (url.includes("msg.urbtix.hk") || url.includes("busy.urbtix.hk")){
 	window.location.href = "http://www.urbtix.hk";
 };
+
+
+function creditCard(){
+    window.onload = function (){
+		var url = window.location.href;
+	if (url.includes("expressPurchase")){
+        var script = document.createElement('script');
+        script.textContent = "setTimeout(\"confirmReview();\", 2000);";
+        (document.head||document.documentElement).prepend(script);
+    }
+    if (url.includes("shoppingCart")){
+        $('#checkout-btn').click();
+    }
+    if (url.includes("mailingPayment")){
+		chrome.storage.local.get(['surname','firstname','phonenumber','email','cctype','ccnum','ccsecuritycode','ccmonth','ccyear','enableCC'], function (items) {
+				if (items.enableCC == true){
+					$('#input-surname').val(items.surname);
+			        $('#input-first-name').val(items.firstname);
+			        $('#input-phone-no').val(items.phonenumber);
+			        $('#input-email').val(items.email);
+			        $('#delivery-method-select').val('TDM');
+			        $('#delivery-method-select').attr('data-selected_id','106')
+			        $('#delivery-method-select option:selected').val('TDM')
+			        var script = document.createElement('script');
+			        script.textContent = "setTimeout(\"deliverySelectionChange();changeAndDisplayPaymentMethod();$('#button-confirm').click();\", 2000);";
+			        (document.head||document.documentElement).prepend(script);
+			        $('#payment-type-select').val(items.cctype);
+			        $('#payment-type-select option:selected').attr('data-payment_type_id',items.cctype);
+			        $('#input-card-number').val(items.ccnum);
+					$('#input-security-code').val(items.ccsecuritycode);
+			        $('#payment-expiry-month-select').val(items.ccmonth);
+			        $('#payment-expiry-year-select').val(items.ccyear);
+				}
+			});
+	    }
+	}
+}
+
 
 function alertBox(){
 	if (document.cookie=="" || getCookie("dialog")== null ){

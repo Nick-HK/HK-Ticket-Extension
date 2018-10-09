@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HK Ticket Tool | Dashboard</title> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html">
+					<strong style="text-align:center;">HK Tickets Tool</strong>
+				</a>
+				
+			<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+        </nav>
+	   <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a class="waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+					</li>
+					<li>
+						<a href="urbtix.html" class="active-menu waves-effect waves-dark"><i class="fa fa-edit"></i> URBTIX </a>
+					</li>
+					<li>
+						<a href="cityline.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> Cityline </a>
+					</li>
+					<li>
+						<a href="aeg.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> AEG Promotions </a>
+					</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+		<div id="page-wrapper">
+		  <div class="header"> 
+				<h1 class="page-header">
+					URBTIX
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li class="active">URBTIX</li>
+				</ol> 						
+		</div>
+        <div id="page-inner" style="min-height: 1500px;">
+			<div class="dashboard-cards"> 
+				<div class="col-md-12 col-sm-12">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title">Configuration</span>
+							<div class="row">
+								<div style="margin:20px">
+									<input type="checkbox" id="enabled"><label for="enabled">Enable</label>
+								</div>
+								<div style="margin:20px">
+									<h4>Surname :</h4>
+									<input type="text" class="form-control" placeholder="Please input Surname" id="surname">
+								</div>
+								<div style="margin:20px">
+									<h4>First Name :</h4>
+									<input type="text" class="form-control" placeholder="Please input First Name" id="first_name">
+								</div>
+								<div style="margin:20px">
+									<h4>Phone Number :</h4>
+									<input type="text" class="form-control" placeholder="Please input Phone Number eg: (+852) 9999 1234" id="phone_number">
+								</div>
+								<div style="margin:20px">
+									<h4>Email :</h4>
+									<input type="text" class="form-control" placeholder="Please input Email eg: xxx@xxx.com" id="email">
+								</div>
+								<div style="margin:20px">
+									<h4>Credit Card Type :</h4><br>
+									<input type="radio" name="cc_card_type" value="220" id="cc_visa">
+									<label for="cc_visa">Visa</label>
+									<input type="radio" name="cc_card_type" value="221" id="cc_master">
+									<label for="cc_master">Master</label>
+									<input type="radio" name="cc_card_type" value="223" id="cc_ae">
+									<label for="cc_ae">AE</label>
+								</div>
+								<div style="margin:20px">
+									<h4>Credit Card Number :</h4>
+									<input type="text" class="form-control" placeholder="Please input Card Number Without Dash/Hyphen (-)" id="cc_number">
+								</div>
+								<div style="margin:20px">
+									<h4>CCV :</h4>
+									<input type="text" class="form-control" placeholder="Please input Security Code" id="cc_security_code">
+								</div>
+								<div class="row" style="margin:20px">
+									<h4>Credit Card Exp. Date :</h4>
+									<div class="form-group inline">
+											<select style="width:30%" class="form-control col-xs-6" id="cc_month">
+												<option value="default"selected disabled>Please select Expiry Month</option>
+												<option value="1" >1</option>
+												<option value="2" >2</option>
+												<option value="3" >3</option>
+												<option value="4" >4</option>
+												<option value="5" >5</option>
+												<option value="6" >6</option>
+												<option value="7" >7</option>
+												<option value="8" >8</option>
+												<option value="9" >9</option>
+												<option value="10" >10</option>
+												<option value="11" >11</option>
+												<option value="12" >12</option>
+											</select>
+											<input type="text" style="width:30%" class="col-xs-6" placeholder="Please input Expired Year eg: 20xx" id="cc_year">
+									</div>
+								</div>
+								<div style="margin:20px">
+									<ul class="collapsible" data-collapsible="accordion">
+										<li>
+											<div class="collapsible-header"><i class="material-icons">whatshot</i>Notes:</div>
+											<div class="collapsible-body">
+												<ul class="list-group">
+													<li class="list-group-item">1. <strong>Please note that the Cread Card Data will only be stored into your computer.</strong></li>
+													<li class="list-group-item">2. <strong>Default method of the Collection is at Machines/Counter.</strong></li>
+													<li class="list-group-item">3. <strong>You should bear all the Extra Charges on Credit Card.</strong></li>
+													<li class="list-group-item">4. <strong>Clicking the 'Clear Button' will clear all the Credit Card in your computer.</strong></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<p id="msg_saved" style="text-align: center; color:red; display: none">Your action have been saved.</p>
+						</div>
+						<div class="card-action right-align">
+							<a id="clear_button" class="waves-effect waves-light btn">Clear</a>
+							<a id="submit_button" class="waves-effect waves-light btn">Submit</a>
+						</div>
+					</div>
+				</div>			
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+	<!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/materialize/js/materialize.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Custom Js -->
+	<script src="assets/js/custom-scripts.js"></script>
+	<script src="../../js/urbtixStorage.js"></script>
+</body>
+
+</html>

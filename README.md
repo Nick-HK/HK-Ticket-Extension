@@ -1,5 +1,8 @@
 # HK Tickets Tool
 
+![](https://i.imgur.com/pie02WW.png)
+
+
 ### Prerequisites:
  -  Chrome: Version support extension (Lastest Version is preferred)
 
@@ -10,11 +13,17 @@
  2.  Open [chrome://extensions/](chrome://extensions/ "chrome://extensions/") with Chrome
  3.  Enable Developer Mode at the upper-right corner
  4.  Click "LOAD UNPACKED" in Chrome and Load the "sources" folder in the unzipped folder
- 5.  Go to http://msg.urbtix.hk and http://msg.cityline.com/busy.html to test with the extension.
+ 5.  Go to http://msg.urbtix.hk and http://msg.cityline.com/busy.html to test with the extension
+ 6.  For Auto Fill Function in URBTIX, Please log-in choose any tickets of a event to test with the functions
 
 ------------
 
-### Change Logs:
+### Changes Logs:
+v1.0.3 Changes:
+ -  Auto Fill-In Credit Card Info. For <b>URBTIX<b>
+ -  Update Logic of AEG Promotions
+ -  Update Dashboard and UI
+ -  Remove Emergency Function
 
 v1.0.2 Changes:
  -  Support AEG Promotions
@@ -29,7 +38,8 @@ v1.0.1 Changes:
 
 ### Future Updates:
 
- -  Auto Fill In Credit Card Information
+ -  Maybe Include Mobile Version
+ -  Switch to a multiple platform as Chorme may not support Extension in later version
 
 ------------
 

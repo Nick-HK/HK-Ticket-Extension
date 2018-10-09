@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HK Ticket Tool | Dashboard</title> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html">
+					<strong style="text-align:center;">HK Tickets Tool</strong>
+				</a>
+				
+			<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+        </nav>
+	   <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a class="waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+					</li>
+					<li>
+						<a href="urbtix.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> URBTIX </a>
+					</li>
+					<li>
+						<a href="cityline.html" class="active-menu waves-effect waves-dark"><i class="fa fa-edit"></i> Cityline </a>
+					</li>
+					<li>
+						<a href="aeg.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> AEG Promotions </a>
+					</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+      
+		<div id="page-wrapper">
+		  <div class="header"> 
+				<h1 class="page-header">
+					Cityline
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li class="active">Cityline</li>
+				</ol> 						
+		</div>
+        <div id="page-inner">
+			<div class="dashboard-cards"> 
+				<div class="col-md-12 col-sm-12">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title">Configuration</span>
+							<div class="row">
+								<div style="margin:20px">
+									<input type="radio" name="event_type" value="cityline_event" id="cityline_event">
+									<label for="cityline_event">Event</label>
+									<input type="radio" name="event_type" value="cityline_activity" id="cityline_activity">
+									<label for="cityline_activity">Activity</label>
+									<input type="radio" name="event_type" value="cityline_home" id="cityline_home">
+									<label for="cityline_home">Home Page</label>
+								</div>
+								<div style="margin:20px">
+									<input type="text" class="form-control" placeholder="Please input Cityline Code here." id="cityline_code">
+								</div>
+							</div>
+							<p id="msg_saved" style="text-align: center; color:red; display: none">Your action have been saved.</p>
+						</div>
+						<div class="card-action right-align">
+							<a id="submit_button" class="waves-effect waves-light btn">Submit</a>
+						</div>
+					</div>
+				</div>			
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+	<!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/materialize/js/materialize.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Custom Js -->
+	<script src="assets/js/custom-scripts.js"></script>
+	<script src="../../js/citylineStorage.js"></script>
+</body>
+
+</html>
