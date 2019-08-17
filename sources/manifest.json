@@ -30,7 +30,12 @@
 				"http://msg.cityline.com/busy.html",
 				"https://www.aegpromotion.com/*",
 				"http://www.aegpromotion.com/*",
-				"https://process.aegpromotion.com/*"
+				"https://aegpromotion.com/*",
+				"http://aegpromotion.com/*",
+				"https://process.aegpromotion.com/*",
+				"http://busy.hkticketing.com/",
+				"https://busy.hkticketing.com/",
+				"https://premier.hkticketing.com/"
 			],
 			"js": ["/js/jquery-3.3.1.min.js","/js/jquery-confirm.min.js","/js/script.js"],
 			"css": ["/css/jqeury-confirm.min.css"],

@@ -19,6 +19,10 @@
 ------------
 
 ### Changes Logs:
+v1.0.4 Changes:
+ -  Update Logic of AEG Promotions
+ -  Fix common bugs
+
 v1.0.3 Changes:
  -  Auto Fill-In Credit Card Info. For <b>URBTIX</b>
  -  Update Logic of AEG Promotions

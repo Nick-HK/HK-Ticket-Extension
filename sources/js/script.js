@@ -1,5 +1,5 @@
 var url = window.location.href;
-
+window.alert = function() {};
 chrome.storage.local.get(['emertick','emerlink'], function (items) {
 	if(items.emertick==true){
 		window.location.assign(items.emerlink);
@@ -7,9 +7,21 @@ chrome.storage.local.get(['emertick','emerlink'], function (items) {
 	}
 });
 
+if (url.includes("hkticketing")){
+	if (url.includes("premier")) {
+        if (document.body.innerText.indexOf("504")>0 || document.body.innerText.indexOf("502") >0)
+		{
+			window.location.href = "https://premier.hkticketing.com/shows/show.aspx?sh=BTSWO0319";
+		}
+    } else if (url.includes("busy")) {
+        window.location.href = "https://premier.hkticketing.com/shows/show.aspx?sh=BTSWO0319";
+    }
+}
+
+
 //AEG
 if (url.includes("aegpromotion.com")){
-	if(url.includes("TryAgain") ){
+	if(url.includes("TryAgain") || document.body.innerText.includes('try again later')){
 		chrome.storage.local.get(['aegTickVal','aegVal'], function (items) {
 			if (items.aegTickVal=='aeg_event'){
 				window.location.href = "http://www.aegpromotion.com/" +  items.aegVal ; //Sample: http://www.aegpromotion.com/jacky2019/
